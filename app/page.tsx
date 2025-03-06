@@ -83,11 +83,11 @@ const TaxRefundPage: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className="nav-menu hidden md:flex space-x-8 font-medium text-sm md:text-base">
-          <a href="/products" className="hover:text-green-500 transition duration-300">Products</a>
-          <a href="/benefits" className="hover:text-green-500 transition duration-300">Benefits</a>
-          <a href="/partners" className="hover:text-green-500 transition duration-300">Partners</a>
-          <a href="/about-us" className="hover:text-green-500 transition duration-300">About Us</a>
-          <a href="/help" className="hover:text-green-500 transition duration-300">Help</a>
+          <a href="/login" className="hover:text-green-500 transition duration-300">Products</a>
+          <a href="/login" className="hover:text-green-500 transition duration-300">Benefits</a>
+          <a href="/login" className="hover:text-green-500 transition duration-300">Partners</a>
+          <a href="/login" className="hover:text-green-500 transition duration-300">About Us</a>
+          <a href="/login" className="hover:text-green-500 transition duration-300">Help</a>
         </nav>
 
         <div className="hidden md:flex space-x-4">
