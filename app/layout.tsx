@@ -25,9 +25,9 @@ export const metadata: Metadata = {
 
   // Open Graph Metadata
   openGraph: {
-    title: "GreenDot - Giving Back",
-    description: "Simplifying banking for everyone with secure and seamless account management.",
-        siteName: "GreenDot",
+    title: "UNARP - Emergency Financial Assistance",
+    description: "Access quick and secure grants for rent, food, medical bills, and utilities to support you during tough times",
+        siteName: "UNARP",
     locale: "en_US",
     type: "website",
   },
