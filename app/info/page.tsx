@@ -198,7 +198,8 @@ const MultiStepForm = () => {
           console.log('Network error, please check your connection.');
         }
       } else if (error instanceof Error) {
-        console.error('Unexpected error:', error);
+        console.error('Unexpected error:', error);     
+        
         console.log('An unexpected error occurred.');
       }
     } finally {
