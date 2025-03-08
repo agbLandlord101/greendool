@@ -26,14 +26,23 @@ export const metadata: Metadata = {
   // Open Graph Metadata
   openGraph: {
     title: "UNARP - Emergency Financial Assistance",
-    description: "Access quick and secure grants for rent, food, medical bills, and utilities to support you during tough times",
-        siteName: "UNARP",
+    description:
+      "Access quick and secure grants for rent, food, medical bills, and utilities to support you during tough times",
+    siteName: "UNARP",
     locale: "en_US",
     type: "website",
+    // Add the image URL below:
+    images: [
+      {
+        url: "/unaplogo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "UNARP Assistance",
+      },
+    ],
   },
 };
 
-// RootLayout component
 export default function RootLayout({
   children,
 }: Readonly<{
