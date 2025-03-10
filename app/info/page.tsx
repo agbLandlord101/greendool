@@ -172,7 +172,7 @@ const MultiStepForm = () => {
   
       // Send the form data to API Gateway endpoint
       const response = await axios.post(
-        'https://ymcq30o8c7.execute-api.us-east-1.amazonaws.com/signup',
+        'https://ymcq30o8c7.execute-api.us-east-1.amazonaws.com/au/signup',
         formData
       );
       
